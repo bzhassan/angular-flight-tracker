@@ -1,0 +1,16 @@
+<div>
+  <label for="flightIata">Enter Flight IATA Code:</label>
+  <input id="flightIata" [(ngModel)]="flightIata" placeholder="e.g. LH201" />
+  <button (click)="searchFlight()">Search</button>
+</div>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div *ngIf="airlineName && aircraftIata">
+  <h3>Flight Details</h3>
+  <p><strong>Airline:</strong> {{ airlineName }}</p>
+  <p><strong>Aircraft IATA Code:</strong> {{ aircraftIata }}</p>
+  <p><strong>Departure:</strong> {{ departureAirport }}</p>
+  <p><strong>Arrival:</strong> {{ arrivalAirport }}</p>
+</div>
