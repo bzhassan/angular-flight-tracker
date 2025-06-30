@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-image: url('assets/images/world-travel-map-with-airplanes-flight-routes-and-pins-marker-illustration-vector.jpg');
+  background-size: cover;             // scales image to cover full screen
+  background-repeat: no-repeat;       // don't repeat image
+  background-position: center center; // centers image both horizontally and vertically
+  background-attachment: fixed;       // optional: keeps image fixed on scroll
+}
