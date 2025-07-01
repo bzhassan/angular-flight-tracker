@@ -1,0 +1,69 @@
+@use '@angular/material' as mat;
+
+@mixin center-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+@mixin component-detail {
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    align-content: center;
+}
+
+@mixin center-content {
+    
+}
+
+.flight-search,
+.search-results,
+.flight-details,
+.flight-info {
+    @include center-component;
+}
+
+
+.search-header,
+.loading {
+    @include component-detail;
+    background-color: rgba($color: #000000, $alpha: 0.65);
+}
+
+h1,
+.search-box,
+.flight-info,
+.app-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flight-info{
+    @include component-detail;
+    background-color: rgba($color: #000000, $alpha: 0.65);
+    flex-direction: column;
+}
+
+.app-icon mat-icon {
+  font-size: 40px; 
+  width: 40px;
+  height: 40px;
+}
+
+.search-box {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error {
+    @include component-detail;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba($color: #f44336, $alpha: 0.85); 
+    color: white;
+    font-weight: bold;
+}
